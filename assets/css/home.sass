@@ -10,6 +10,8 @@
 
 body
     overflow-x: hidden
+
+// header
 header
     width: 100%
     height: 80px
@@ -107,11 +109,16 @@ nav
         top: 10px
         cursor: pointer  
 
+
+// main
+
 main
     width: 100%
     height: 100%
     padding-top: 100px
     // border: 1px solid blue
+
+// section 1
 .sec_one
     width: 100%
     height: auto
@@ -178,6 +185,9 @@ main
             background: rgb(132,131,242)
             background: linear-gradient(106deg, rgba(132,131,242,1) 0%, rgba(255,143,226,1) 99%)
 
+
+// section 2, section 3
+
 .sec_two, .sec_three
     width: 100%
     height: auto
@@ -228,6 +238,8 @@ main
 .sec_three_help_info
     width: 100%
     padding-left: 50px
+
+// section 4
         
 .sec_four
     width: 100%
@@ -312,6 +324,9 @@ main
     &:hover
         background-color: #F0F2EE
 
+
+// section 5
+
 .sec_five
     width: 100%
     height: auto
@@ -374,6 +389,9 @@ main
         color: #49BE55
         font-family: 'Poppins', sans-serif
         font-weight: 500
+
+
+// section 6
 
 .sec_six
     width: 100%
@@ -479,6 +497,9 @@ main
             bottom: 0
             left: 10px
 
+
+// section 7
+
 .sec_seven
     width: 100%
     height: auto
@@ -549,13 +570,11 @@ main
 .form_client_name
     width: 100%
     display: flex
-    // flex-direction: row
-    // justify-content: space-between
     margin-bottom: 10px
     .input
         width: 50%
         &:first-child
-            padding-right: 30px
+            padding-right: 10px
     input
         width: 100%
 .input  
@@ -577,12 +596,19 @@ main
         // border: 1px solid red
         &:focus
             outline: none
-        &::placeholder
+        &::placeholder,
+            font-family: 'Poppins', sans-serif
+            font-size: 12px
+            color: #C2C2C2
+        option
             font-family: 'Poppins', sans-serif
             font-size: 12px
             color: #C2C2C2
     .input1
         height: 70px
+
+
+// footer
 
 footer
     width: 100%
@@ -593,6 +619,7 @@ footer
     display: flex
     flex-direction: column
     align-items: center
+    position: relative
 .footer_logo
     margin-bottom: 70px
 .footer_info
@@ -677,6 +704,7 @@ footer
         color: #999999
         font-family: 'Poppins', sans-serif
         font-size: 12px
+        text-decoration: underline
     img
         object-fit: cover
         width: 100%
@@ -697,25 +725,32 @@ footer
             right: 20%
             bottom: 0
             
-            
-            
-            
+.scrollbtn
+    position: absolute
+    right: 5%
+    bottom: 15%
+    width: 70px
+    height: 70px
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 50%
+    background: rgb(132,131,242)
+    background: linear-gradient(106deg, rgba(132,131,242,1) 0%, rgba(255,143,226,1) 99%)
+    cursor: pointer
+    transition: all 0.2s ease-in
+    &:hover
+        box-shadow: 0px 5px 10px rgba(132,131,242, .5)
+    svg
+        fill: #fff
+        object-fit: cover
+        width: 50%
+        height: 50%            
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+// responsive
 
 
 @media screen and ( max-width: 1120px )
@@ -875,7 +910,9 @@ footer
         width: 100%
         &:nth-child(2n)
             display: none
-            
+    .scrollbtn
+        width: 60px
+        height: 60px       
 
 @media screen and ( max-width: 500px )
     .slide_element
@@ -898,7 +935,8 @@ footer
         li
             width: 100%
             font-size: 13px
-    
+    .scrollbtn
+        bottom: 5%
 
 @media screen and ( max-width: 400px )
     .search_bar
@@ -909,8 +947,12 @@ footer
         
 
 
-@media screen and ( max-width: 330px )
+@media screen and ( max-width: 340px )
     nav
         padding-left: 5%
-    
+    .form_client_name
+        .input
+            width: 50%
+            &:first-child
+                padding-right: 0px
     
