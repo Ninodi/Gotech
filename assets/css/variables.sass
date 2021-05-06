@@ -1,0 +1,34 @@
+
+$width450: 450px
+$width700: 700px
+$width769: 769px
+$width1279: 1279px
+$width1441: 1441px
+$max-width: 1637px // 1336px
+
+    
+
+@mixin plus450()
+    @media screen and (min-width: $width450)
+        @content
+
+@mixin plus700()
+    @media screen and (min-width: $width700)
+        @content
+
+@mixin plus769()
+    @media screen and (min-width: $width769)
+        @content
+
+@mixin plus1025()
+    @media screen and (min-width: $width1279)
+        @content
+
+@mixin plus1441()
+    @media screen and (min-width: $width1441)
+        @content
+
+@mixin sizePlus($width)
+    @media screen and (min-width: $width)
+        @content
+

@@ -1,0 +1,916 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap')
+
+
+*
+    padding: 0
+    margin: 0
+    text-decoration: none
+    list-style: none
+    box-sizing: border-box
+
+body
+    overflow-x: hidden
+header
+    width: 100%
+    height: 80px
+    margin-bottom: 10px
+    background-color: #fff
+    position: fixed
+    z-index: 10
+    top: 0
+    left: 0
+.container
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+
+.logo
+    margin-right: 50px
+nav
+    width: 35%
+    ul
+        widows: 100%
+        display: flex
+        flex-direction: row
+    li
+        position: relative
+        margin-right: 20px
+        &:hover
+            a
+                color: #9D60EB
+                // font-weight: 500
+        &.active a
+            &::after 
+                position: absolute
+                content: ''
+                width: 8px
+                height: 8px
+                border-radius: 50%
+                background-color: #6362D7
+                left: 50%
+                bottom: -10px
+    a
+        // display: block
+        // min-width: 40px
+        width: 40px
+        // height: 30px
+        color: #555555
+        font-size: 14px
+        font-family: 'Poppins', sans-serif
+
+.search_bar
+    width: 30%
+    display: flex
+    flex-direction: row
+    align-items: center
+    a
+        display: flex
+        width: 130px
+        height: 42px
+        border-radius: 4px
+        justify-content: center
+        align-items: center
+        color: #fff
+        font-size: 14px
+        font-family: 'Poppins', sans-serif
+        font-weight: 500
+        background: rgb(132,131,242)
+        background: linear-gradient(106deg, rgba(132,131,242,1) 0%, rgba(255,143,226,1) 99%)
+        &:hover
+            background: rgb(41,106,70)
+            background: linear-gradient(106deg, rgba(41,106,70,1) 0%, rgba(73,190,85,1) 99%)
+    form
+        width: 60%
+        display: flex
+        align-items: center
+        position: relative
+        margin-right: 35px
+    input
+        width: 100%
+        // max-width: 270px
+        height: 42px
+        border-radius: 4px
+        border: 1px solid #C6BAF8
+        &:focus
+            outline: #C6BAF8
+        &::placeholder
+            width: calc(100% - 60px)
+            padding-left: 16px
+            font-size: 12px
+            font-family: 'Poppins', sans-serif
+            color: #CCCCCC        
+    svg
+        position: absolute
+        right: 10px
+        top: 10px
+        cursor: pointer  
+
+main
+    width: 100%
+    height: 100%
+    padding-top: 100px
+    // border: 1px solid blue
+.sec_one
+    width: 100%
+    height: auto
+    margin-bottom: 60px
+    // background-color: cyan
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    img
+        width: 50%
+        height: 35%
+        z-index: -10
+    // &::after
+    //     position: absolute
+    //     left: 0
+    //     top: 100%
+    //     content: ''
+    //     width: 100%
+    //     height: 30px
+    //     opacity: 50%
+    //     z-index: -11
+    //     background: rgb(255,255,255)
+    //     background: linear-gradient(106deg, rgba(255,255,255,1) 0%, rgba(170,215,255,1) 99%)
+
+.intro
+    height: auto
+    width: 100%
+    text-align: center
+    h1
+        font-size: 46px
+        color: #222222
+        font-family: 'Poppins', sans-serif
+        font-weight: 600
+    h2
+        font-size: 46px
+        font-family: 'Poppins', sans-serif
+        font-weight: 400
+    p
+        margin: 0 auto
+        width: 50%
+        margin-bottom: 20px
+        color: #555555
+        font-family: 'Poppins', sans-serif
+.links
+    width: 100%
+    height: auto
+    display: flex
+    justify-content: center
+    a
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-right: 10px
+        width: 140px
+        height: 48px
+        color: #9D60EB
+        border: 1px solid #9D60EB
+        border-radius: 4px
+        font-family: 'Poppins', sans-serif
+        &:hover
+            color: #fff
+            border: unset
+            background: rgb(132,131,242)
+            background: linear-gradient(106deg, rgba(132,131,242,1) 0%, rgba(255,143,226,1) 99%)
+
+.sec_two, .sec_three
+    width: 100%
+    height: auto
+    display: flex
+    justify-content: center
+    padding-left: 10%
+    padding-right: 10%
+.sec_two_about, .sec_three_help
+    display: grid
+    grid-template-columns: 1fr 1fr
+    width: 100%
+    height: 50%
+    padding: 30px
+    margin-bottom: 80px
+.sec_two_about_info, .sec_three_help_info
+    height: 100%
+    width: 70%
+    display: flex
+    flex-direction: column
+    h3
+        font-size: 36px
+        color:#222222
+        font-family: 'Poppins', sans-serif
+        font-weight: 400
+        &:nth-of-type(2)
+            font-weight: 600
+            margin-bottom: 20px
+    p
+        margin-bottom: 20px
+        font-size: 15px
+        font-family: 'Poppins', sans-serif
+    a
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-right: 10px
+        width: 140px
+        height: 48px
+        color: #fff
+        background: rgb(132,131,242)
+        background: linear-gradient(106deg, rgba(132,131,242,1) 0%, rgba(255,143,226,1) 99%)
+        border-radius: 4px
+        font-family: 'Poppins', sans-serif
+        &:hover
+            background: rgb(255,143,226)
+            background: linear-gradient(106deg, rgba(255,143,226,1) 0%, rgba(99,98,215,1) 99%)
+
+.sec_three_help_info
+    width: 100%
+    padding-left: 50px
+        
+.sec_four
+    width: 100%
+    height: auto
+    margin-bottom: 150px
+.slider 
+    width: 100%
+    height: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+.slider_name
+    text-align: center
+    margin-bottom: 30px
+    h3
+        font-size: 36px
+        color:#222222
+        font-family: 'Poppins', sans-serif
+        font-weight: 400
+        &:nth-of-type(2)
+            font-weight: 600
+            margin-bottom: 20px
+.slider_bar
+    padding-right: 5%
+    padding-left: 5%
+.slides
+    width: 100%
+    height: 50%
+    display: flex
+    flex-direction: row
+    margin: 0 auto
+    margin-bottom: 30px
+
+.slide_element
+    min-height: 50%
+    max-width: 250px
+    background-color: #FFFFFF
+    border-radius: 8px
+    box-shadow: 0 5px 15px #999999
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding: 20px
+    // border: 1px solid blue
+    margin-right: 30px
+    &:last-child
+        margin-right: unset
+    img
+        height: 150px
+        width: 150px
+        margin-bottom: 10px
+    h4
+        font-family: 'Poppins', sans-serif
+        font-size: 15px
+        font-weight: 400
+        margin-bottom: 10px
+    span
+        font-weight: 600
+    p
+        text-align: center
+        font-family: 'Poppins', sans-serif
+        font-size: 10px
+        margin-bottom: 40px
+.arrows
+    width: 100%
+    display: flex
+    flex-direction: row
+    justify-content: center
+.arrow_box
+    width: 35px
+    height: 35px
+    margin-right: 20px
+    border-radius: 50%
+    background-color: #fff
+    box-shadow: 0 5px 15px #999999
+    display: flex
+    justify-content: center
+    align-items: center
+    cursor: pointer
+    &:first-child
+        margin-left: 15px
+    &:hover
+        background-color: #F0F2EE
+
+.sec_five
+    width: 100%
+    height: auto
+    margin-bottom: 130px
+.products
+    width: 100%
+    height: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+ 
+.product_title
+    width: 50%
+    text-align: center
+    h4
+        font-family: 'Poppins', sans-serif
+        font-size: 20px
+        font-weight: 400
+        margin-bottom: 10px
+    span
+        font-weight: 600
+    p
+        margin: 0 auto
+        text-align: center
+        font-family: 'Poppins', sans-serif
+        font-size: 15px
+        width: 80%
+        margin-bottom: 40px
+.product_grid
+    min-height: 470px
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    grid-column-gap: 30px
+    padding-left: 5%
+    padding-right: 5%
+.product_item
+    width: 200px
+    height: 200px
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    padding: 10px
+    border-radius: 8px
+    box-shadow: 0 5px 15px #999999
+    align-self: end
+    &:nth-child(2), &:nth-child(5)
+        align-self: start
+    img
+        width: 100px
+        height: 30px
+        margin-bottom: 20px
+    p
+        font-family: 'Poppins', sans-serif
+        font-size: 13px
+        text-align: center
+        color: #999999
+        margin-bottom: 20px
+    a
+        color: #49BE55
+        font-family: 'Poppins', sans-serif
+        font-weight: 500
+
+.sec_six
+    width: 100%
+    height: auto
+    margin-bottom: 100px
+.client_bar
+    width: 100%
+    height: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    position: relative
+    img
+        width: 150px
+        height: 150px
+    h4
+        font-family: 'Poppins', sans-serif
+        font-size: 20px
+        font-weight: 400
+        margin-bottom: 50px
+    span
+        font-weight: 600
+    .arrows
+        margin-bottom: 40px
+    .arrow_box
+        box-shadow: unset
+.client_info
+    width: 35%
+    text-align: center
+    margin-bottom: 34px
+    position: relative
+    svg
+        width: 35px
+    p
+        font-family: 'Poppins', sans-serif
+.main_info
+    // width: 40%
+    margin: 0 auto
+    font-size: 18px
+    font-weight: 400
+    letter-spacing: 0.2px
+    margin-bottom: 30px
+.left_quote
+    position: absolute
+    top: -10px
+    left: -60px
+.right_quote
+    position: absolute
+    top: -10px
+    right: -60px
+    transform: rotateY(180deg)
+.client_name
+    font-size: 13px
+    font-weight: 500
+    margin-bottom: 18px
+.client_country
+    font-size: 11px
+    font-weight: 400
+.left_icons, .right_icons
+    width: 15%
+    height: 100%
+    position: absolute
+    // border: 1px solid red
+.left_icons
+    top: 0
+    left: 100px
+    img
+        position: absolute
+        &:first-child
+            width: 70px
+            height: 70px
+            top: 50px
+            right: 0
+        &:nth-child(2)
+            width: 100px
+            height: 100px
+            top: 35%
+            left: 0
+        &:nth-child(3)
+            width: 130px
+            height: 130px
+            bottom: 0
+            right: 10px
+            
+.right_icons
+    top: 0
+    right: 100px
+    img
+        position: absolute
+        &:first-child 
+            width: 130px
+            height: 130px    
+            top: 40px
+            left: 0
+        &:nth-child(2)
+            width: 100px
+            height: 100px
+            top: 40%
+            right: 0
+        &:nth-child(3)
+            width: 70px
+            height: 70px
+            bottom: 0
+            left: 10px
+
+.sec_seven
+    width: 100%
+    height: auto
+    margin-bottom: 100px
+.form_sec
+    width: 100%
+    height: 100%
+    background: rgb(255,255,255)
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(212,235,255,1) 100%)
+    padding-top: 60px
+.form_title
+    width: 100%
+    text-align: center
+    margin-bottom: 36px
+    h1
+        font-size: 20px
+        font-family: 'Poppins', sans-serif
+        font-weight: 400
+        &:nth-child(2)
+            font-weight: 600
+.form_div
+    width: 100%
+    height: 100%
+    text-align: center
+    // border: 1px solid red
+    margin-bottom: 60px
+    form
+        margin: 0 auto
+        background-color: #fff
+        height: 100%
+        width: 45%
+        border-radius: 8px
+        box-shadow: 0 10px 15px #3E3E3E
+        display: flex
+        flex-direction: column
+        // border: 1px solid red
+        padding: 50px
+        position: relative
+    img
+        height: 300px
+        position: absolute
+        &:nth-of-type(1)
+            bottom: -80px
+            left: -260px
+        &:nth-of-type(2)
+            bottom: -80px
+            right: -150px
+        &:nth-of-type(3)
+            bottom: -80px
+            right: -260px
+
+    button
+        width: 140px
+        height: 48px
+        color: #fff
+        outline: none
+        border: none
+        border-radius: 4px
+        background: rgb(132,131,242)
+        background: linear-gradient(106deg, rgba(132,131,242,1) 0%, rgba(255,143,226,1) 99%)
+        cursor: pointer
+        &:hover
+            background: rgb(255,143,226)
+            background: linear-gradient(106deg, rgba(255,143,226,1) 0%, rgba(99,98,215,1) 99%)
+        &:focus
+            background: rgb(41,106,70)
+            background: linear-gradient(106deg, rgba(41,106,70,1) 0%, rgba(73,190,85,1) 99%)            
+.form_client_name
+    width: 100%
+    display: flex
+    // flex-direction: row
+    // justify-content: space-between
+    margin-bottom: 10px
+    .input
+        width: 50%
+        &:first-child
+            padding-right: 30px
+    input
+        width: 100%
+.input  
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    margin-bottom: 28px
+    label
+        font-family: 'Poppins', sans-serif
+        font-weight: 500
+        font-size: 14px
+        margin-bottom: 0px
+    input, select
+        width: 100%
+        border: transparent
+        border-bottom: 1px solid #E5E5E5
+        height: 40px
+        // background-color: red
+        // border: 1px solid red
+        &:focus
+            outline: none
+        &::placeholder
+            font-family: 'Poppins', sans-serif
+            font-size: 12px
+            color: #C2C2C2
+    .input1
+        height: 70px
+
+footer
+    width: 100%
+    height: auto
+.footer_sec
+    width: 100%
+    height: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+.footer_logo
+    margin-bottom: 70px
+.footer_info
+    width: 100%
+    padding-left: 10%
+    padding-right: 14%
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    ul
+        &:nth-of-type(2)
+            padding-left: 10px
+    li
+        width: 100%
+        font-size: 15px
+        font-family: 'Poppins', sans-serif
+        margin-bottom: 14px
+        color: #777777
+        &:hover
+            a
+                color: #A3A7A0
+        a
+            // border: 1px solid red
+            display: flex
+            flex-direction: row
+            align-items: center
+            color: #777777
+            svg
+                margin-right: 26px
+.footer_contact
+    li
+        margin-bottom: 10px
+.title
+    color: #101C21 !important
+    font-family: 'Poppins', sans-serif
+    font-weight: 500 
+    font-size: 16px
+
+.soc_media
+    // border: 1px solid red
+    display: flex
+    flex-direction: row
+    align-items: center
+    a
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 40px
+        width: 40px
+        margin-right: 20px
+        border-radius: 50%
+        background-color: cyan
+        &:first-child
+            background: rgb(132,131,242)
+            background: linear-gradient(106deg, rgba(132,131,242,1) 0%, rgba(255,143,226,1) 99%)
+        &:nth-child(2)
+            background: rgb(0,181,108)
+            background: linear-gradient(51deg, rgba(0,181,108,1) 0%, rgba(29,190,117,1) 14%, rgba(104,213,140,1) 39%, rgba(158,230,157,1) 71%)
+        &:nth-child(3)
+            background: rgb(255,154,182)
+            background: linear-gradient(96deg, rgba(255,154,182,1) 0%, rgba(240,50,149,1) 100%)
+        &:nth-child(4)
+            background: rgb(240,147,118)
+            background: linear-gradient(96deg, rgba(240,147,118,1) 0%, rgba(240,219,121,1) 100%)
+
+.footer_ul
+    h6
+        margin-bottom: 10px
+.address
+    margin-bottom: 20px
+    p
+        color: #999999
+        font-family: 'Poppins', sans-serif
+        font-size: 12px
+.copyright
+    width: 100%
+    height: 250px
+    // text-align: center
+    position: relative
+    p
+        text-align: center
+        margin-top: 100px
+        color: #999999
+        font-family: 'Poppins', sans-serif
+        font-size: 12px
+    img
+        object-fit: cover
+        width: 100%
+        position: absolute
+        z-index: -9
+        &:nth-of-type(1)
+            bottom: 0
+            left: 0
+        &:nth-of-type(2)
+            width: 250px
+            height: 200px
+            bottom: -40px
+            left: 20%
+            transform: scale(0.6)
+        &:nth-of-type(3)
+            width: 150px
+            height: 200px
+            right: 20%
+            bottom: 0
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and ( max-width: 1120px )
+    .logo
+        margin-right: 30px
+    nav
+        li
+            margin-right: 10px
+        a
+            font-size: 12px
+    .sec_two, .sec_three
+        img
+            width: 100%
+            height: 100%
+    .sec_two_about_info, .sec_three_help_info
+        width: 100%
+        h3
+            font-size: 30px
+        p
+            font-size: 12px
+    .footer_info
+        padding-right: 8%
+    .form_div
+        img
+            &:nth-of-type(3)
+                display: none
+                
+
+@media screen and ( max-width: 900px )
+    .logo
+        margin-right: 20px
+    nav
+        a
+            font-size: 10px
+    .search_bar
+        a
+            max-width: 100px
+            height: 34px
+            font-size: 12px
+        form
+            height: 34px
+            margin-right: 20px
+        input
+            height: 100%
+        svg
+            width: 14px
+            height: 14px
+            top: 12px
+    .footer_info
+        padding-right: 5%
+    form
+        .input
+            label
+                font-size: 10px
+
+
+@media screen and ( max-width: 750px )
+    .logo 
+        display: block
+        width: 100px
+        height: 40px
+        svg
+            width: 100%
+            height: 100%
+    .search_bar
+        // background-color: cyan
+        width: 30%
+        form
+            margin-right: 5px
+            input
+                display: none
+    .sec_one
+        h1, h2
+            font-size: 30px
+    .sec_two_about, .sec_three_help
+        grid-template-columns: 1fr
+        position: relative
+        img
+            width: 40%
+            height: 50%
+            position: absolute
+            right: 0
+            bottom: 10px
+            z-index: -9
+    .sec_three_help
+        width: 100%
+        padding-left: unset
+        text-align: end
+        img
+            height: 60%
+            left: 0
+    .product_grid
+        grid-template-columns: 1fr 1fr
+        grid-gap: 30px
+    .product_title
+        width: 70%
+        p
+            width: 100%
+    .slide_element
+        &:nth-child(2)
+            margin-right: 10px
+        &:nth-child(3)
+            display: none
+    
+    .footer_info
+        grid-template-columns: 1fr 1fr
+        ul
+            &:nth-of-type(2)
+                padding-left: unset
+                order: -1
+    .form_div
+        form
+            width: 70%
+        img
+            display: none
+    .footer_logo
+        // width: 70%
+
+                
+                
+
+
+@media screen and ( max-width: 580px )
+    .container
+        flex-direction: column-reverse
+    .logo   
+        display: none
+    nav
+        width: 100%
+        ul
+            justify-content: center
+            width: 100%
+    .sec_one
+        h1, h2
+            font-size: 20px
+        p
+            font-size: 13px
+    .search_bar
+        padding-left: 13%
+        padding-right: 10%
+        width: 100%
+        margin-bottom: 10px
+        a
+            height: 24px
+        form
+            height: 24px
+            input
+                display: block
+                &::placeholder
+                    font-size: 8px
+        svg
+            top: 5px
+    .product_grid
+        grid-template-columns: 1fr 
+    .product_item
+        max-width: 300px
+        width: 100%
+        &:nth-child(2n)
+            display: none
+            
+
+@media screen and ( max-width: 500px )
+    .slide_element
+        margin-right: unset
+        &:nth-child(2)
+            display: none
+    .client_info
+        width: 50%
+    .main_info
+        font-size: 14px
+    .footer_info
+        grid-template-columns: 1fr 
+        grid-gap: 20px
+        ul
+            display: flex
+            flex-direction: column
+            text-align: center
+            &:nth-of-type(3)
+                order: -2
+        li
+            width: 100%
+            font-size: 13px
+    
+
+@media screen and ( max-width: 400px )
+    .search_bar
+        padding-left: 8%
+        padding-right: 8%
+    .product_item
+        max-width: 200px
+        
+
+
+@media screen and ( max-width: 330px )
+    nav
+        padding-left: 5%
+    
+    
