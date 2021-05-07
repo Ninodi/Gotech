@@ -331,7 +331,7 @@ main
 .sec_five
     width: 100%
     height: auto
-    margin-bottom: 130px
+    margin-bottom: 150px
 .products
     width: 100%
     height: 100%
@@ -363,6 +363,12 @@ main
     grid-column-gap: 30px
     padding-left: 5%
     padding-right: 5%
+    // border: 1px solid blue
+    &.onscroll
+        .product_item
+            margin-top: 50px
+            &:nth-child(2), &:nth-child(5)
+                margin-top: 0
 .product_item
     width: 200px
     height: 200px
@@ -370,12 +376,14 @@ main
     flex-direction: column
     align-items: center
     justify-content: center
+    // border: 1px solid red
     padding: 10px
     border-radius: 8px
     box-shadow: 0 5px 15px #999999
-    align-self: end
+    margin-top: 0px
+    transition: margin-top 0.5s ease-in
     &:nth-child(2), &:nth-child(5)
-        align-self: start
+        margin-top: 50px
     img
         width: 100px
         height: 30px
@@ -386,10 +394,14 @@ main
         text-align: center
         color: #999999
         margin-bottom: 20px
+        transition: all .3s ease-in
+        will-change: color
     a
         color: #49BE55
         font-family: 'Poppins', sans-serif
         font-weight: 500
+
+
 
 
 // section 6
