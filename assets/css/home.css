@@ -504,7 +504,7 @@ main {
 
 .sec_five {
   width: 100%;
-  height: auto;
+  height: 700px;
   margin-bottom: 150px;
 }
 
@@ -1302,10 +1302,25 @@ footer {
     height: 60%;
     left: 0;
   }
+  .sec_five {
+    height: auto;
+  }
   .product_grid {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     grid-gap: 30px;
+  }
+  .product_grid.onscroll .product_item {
+    margin-top: 0;
+  }
+  .product_grid.onscroll .product_item:nth-child(2), .product_grid.onscroll .product_item:nth-child(5) {
+    margin-top: 0;
+  }
+  .product_item {
+    margin-top: 0;
+  }
+  .product_item:nth-child(2), .product_item:nth-child(5) {
+    margin-top: 0;
   }
   .product_title {
     width: 70%;

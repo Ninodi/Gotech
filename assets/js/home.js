@@ -17,9 +17,13 @@ const options = {
 }
 
 let observer = new IntersectionObserver((entries, observer) => {
+    // if (!entry.isIntersecting){
+    //     return
+    // }
     entries.forEach((entry) => {
         console.log('jora')
         entry.target.classList.toggle('onscroll')
+        // observer.unobserve(entry.target)
     })
 }, options)
 

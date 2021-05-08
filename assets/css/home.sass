@@ -330,8 +330,9 @@ main
 
 .sec_five
     width: 100%
-    height: auto
+    height: 700px
     margin-bottom: 150px
+    // border: 1px solid cyan
 .products
     width: 100%
     height: 100%
@@ -870,9 +871,20 @@ footer
         img
             height: 60%
             left: 0
+    .sec_five
+        height: auto
     .product_grid
         grid-template-columns: 1fr 1fr
         grid-gap: 30px
+        &.onscroll
+            .product_item
+                margin-top: 0
+                &:nth-child(2), &:nth-child(5)
+                    margin-top: 0
+    .product_item
+        margin-top: 0
+        &:nth-child(2), &:nth-child(5)
+            margin-top: 0
     .product_title
         width: 70%
         p
