@@ -7,11 +7,10 @@
     text-decoration: none
     list-style: none
     box-sizing: border-box
-
-
+    
+  
 body
     overflow-x: hidden
-
 
 // header
 header
@@ -121,97 +120,99 @@ main
     // border: 1px solid blue
 
 // section 1
+
+
 .sec_one
     width: 100%
-    height: auto
-    margin-bottom: 60px
-    // background-color: cyan
-    display: flex
-    flex-direction: column
-    justify-content: center
-    align-items: center
+    height: 700px
+    margin-bottom: 250px
+    // border: 1px solid cyan
 
-.portfolio_sec_title  
+.product_sec_title  
     width: 100%
     text-align: center
-    margin-bottom: 70px
+    margin-bottom: 100px
     h1
-        font-size: 36px
+        font-size: 46px
         margin-bottom: 30px
         font-family: 'Poppins', sans-serif
         font-weight: 400
         span
             font-weight: 600
     h3
-        font-size: 15px
+        font-size: 18px
         color: #555555
         font-family: 'Poppins', sans-serif
         font-weight: 400
 
-.portfolio_items
+.products
     width: 100%
     height: 100%
-    cursor: pointer
-.portfolio_title
-    text-align: center
-    h2
-        font-size: 30px
-        margin-bottom: 30px
-        font-family: 'Poppins', sans-serif
-        font-weight: 400
-        span
-            font-weight: 600  
-
-.portfolio_grid
-    width: 60%
-    // padding: 40px
-    margin: 0 auto
-    display: grid
-    grid-template-columns: 1fr 1fr 1fr
-    grid-gap: 15px
-.portfolio_grid_item
-    max-width: 300px
-    height: 350px
-    background-color: #fff
-    border-radius: 8px
-    box-shadow: 0 10px 10px #999999
-    // border: 1px solid red
-    overflow: hidden
-    &:hover
-        .item_img
-            transform: scale(1.1)
-            // img
-.item_img
-    width: 100%
-    height: 50%
-    padding: 5px
-    transition: 0.3s ease-in
-    img
-        object-fit: cover
-        width: 100%
-        height: 100%
-
-.item_descr
     display: flex
     flex-direction: column
-    justify-content: flex-start
-    padding: 10px
-    h5, p, a
-        margin-bottom: 10px
+    align-items: center
+ 
+.product_title
+    width: 50%
+    text-align: center
+    h4
         font-family: 'Poppins', sans-serif
-    h5
-        font-size: 16px
-        font-weight: 500  
-    p
-        color: #555555
-        font-size: 12px
+        font-size: 20px
         font-weight: 400
+        margin-bottom: 10px
+    span
+        font-weight: 600
+    p
+        margin: 0 auto
+        text-align: center
+        font-family: 'Poppins', sans-serif
+        font-size: 15px
+        width: 80%
+        margin-bottom: 40px
+.product_grid
+    min-height: 470px
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    grid-column-gap: 30px
+    padding-left: 5%
+    padding-right: 5%
+    // border: 1px solid blue
+    &.onscroll
+        .product_item
+            margin-top: 50px
+            &:nth-child(2), &:nth-child(5)
+                margin-top: 0
+.product_item
+    width: 200px
+    height: 200px
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    // border: 1px solid red
+    padding: 10px
+    border-radius: 8px
+    box-shadow: 0 5px 15px #999999
+    margin-top: 0px
+    transition: margin-top 0.5s ease-in
+    &:nth-child(2), &:nth-child(5)
+        margin-top: 50px
+    img
+        width: 100px
+        height: 30px
+        margin-bottom: 20px
+    p
+        font-family: 'Poppins', sans-serif
+        font-size: 13px
+        text-align: center
+        color: #999999
+        margin-bottom: 20px
+        transition: all .3s ease-in
+        will-change: color
     a
         color: #49BE55
-        font-size: 14px
+        font-family: 'Poppins', sans-serif
         font-weight: 500
-
-
 
 // section 2
 
@@ -463,11 +464,6 @@ footer
 
 
 
-
-
-
-
-
 // responsive
 
 
@@ -479,8 +475,6 @@ footer
             margin-right: 10px
         a
             font-size: 12px
-    .portfolio_grid
-        width: 70%
     .footer_info
         padding-right: 8%
     .form_div
@@ -509,8 +503,6 @@ footer
             width: 14px
             height: 14px
             top: 12px
-    .portfolio_grid
-        width: 80%
     .footer_info
         padding-right: 5%
     form
@@ -534,17 +526,25 @@ footer
             margin-right: 5px
             input
                 display: none
-    .portfolio_grid
+    .sec_one
+        height: auto
+        margin-bottom: 100px
+    .product_grid
         grid-template-columns: 1fr 1fr
-    .title  
-        h1
-            font-size: 38px
-        h3
-            font-size: 16px
-    .portfolio_title
-        h2
-            font-size: 30px
-
+        grid-gap: 30px
+        &.onscroll
+            .product_item
+                margin-top: 0
+                &:nth-child(2), &:nth-child(5)
+                    margin-top: 0
+    .product_item
+        margin-top: 0
+        &:nth-child(2), &:nth-child(5)
+            margin-top: 0
+    .product_title
+        width: 70%
+        p
+            width: 100% 
     .footer_info
         grid-template-columns: 1fr 1fr
         ul
@@ -573,7 +573,6 @@ footer
         ul
             justify-content: center
             width: 100%
-
     .search_bar
         padding-left: 13%
         padding-right: 10%
@@ -589,24 +588,18 @@ footer
                     font-size: 8px
         svg
             top: 5px
-
+    .product_grid
+        grid-template-columns: 1fr 
+    .product_item
+        max-width: 300px
+        width: 100%
+        &:nth-child(2n)
+            display: none
     .scrollbtn
         width: 60px
         height: 60px       
 
 @media screen and ( max-width: 500px )
-    .title  
-        h1
-            font-size: 30px
-        h3
-            font-size: 16px
-    .portfolio_title
-        h2
-            font-size: 25px
-    .portfolio_grid
-        grid-template-columns: 1fr
-    .portfolio_grid_item
-        margin: 0 auto
     .footer_info
         grid-template-columns: 1fr 
         grid-gap: 20px
@@ -626,6 +619,8 @@ footer
     .search_bar
         padding-left: 8%
         padding-right: 8%
+    .product_item
+        max-width: 200px
         
 
 

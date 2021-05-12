@@ -28,6 +28,3 @@ let observer = new IntersectionObserver((entries, observer) => {
 }, options)
 
 observer.observe(onScroll)
-// onScroll.forEach((each) => {
-//     observer.observe(each)
-// })
