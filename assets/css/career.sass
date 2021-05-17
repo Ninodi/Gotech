@@ -97,16 +97,19 @@ nav
         width: 100%
         // max-width: 270px
         height: 42px
+        padding-left: 10px
         border-radius: 4px
         border: 1px solid #C6BAF8
         &:focus
             outline: #C6BAF8
         &::placeholder
             width: calc(100% - 60px)
-            padding-left: 16px
+            // padding-left: 16px
             font-size: 12px
             font-family: 'Poppins', sans-serif
-            color: #CCCCCC        
+            color: #CCCCCC  
+        &:-webkit-autofill 
+            box-shadow: 0 0 0px 1000px #fff inset
     svg
         position: absolute
         right: 10px
@@ -150,7 +153,7 @@ main
     margin: 0 auto
     width: 50%
     text-align: center
-    // margin-bottom: 100px
+    margin-bottom: 50px
     h1
         font-size: 30px
         margin-bottom: 30px
@@ -324,8 +327,19 @@ main
     box-shadow: 0 5px 10px #999999
     border-radius: 8px
     padding: 15px
+    opacity: 0
+    animation: fade 0.7s ease-in
+    animation-fill-mode: forwards
     &.nodisplay
         display: none
+
+@keyframes fade
+    0%
+        opacity: 0
+        
+    100%
+        opacity: 1
+
 .job_name
     width: 100%
     border-bottom: 1px solid #EBEBEB
@@ -491,6 +505,8 @@ main
             font-family: 'Poppins', sans-serif
             font-size: 12px
             color: #C2C2C2
+        &:-webkit-autofill 
+            box-shadow: 0 0 0px 1000px #fff inset
         option
             font-family: 'Poppins', sans-serif
             font-size: 12px

@@ -94,6 +94,7 @@ nav
         width: 100%
         // max-width: 270px
         height: 42px
+        padding-left: 10px        
         border-radius: 4px
         border: 1px solid #C6BAF8
         &:focus
@@ -103,7 +104,9 @@ nav
             padding-left: 16px
             font-size: 12px
             font-family: 'Poppins', sans-serif
-            color: #CCCCCC        
+            color: #CCCCCC 
+        &:-webkit-autofill 
+            box-shadow: 0 0 0px 1000px #fff inset       
     svg
         position: absolute
         right: 10px
@@ -316,6 +319,8 @@ main
             font-family: 'Poppins', sans-serif
             font-size: 12px
             color: #C2C2C2
+        &:-webkit-autofill 
+            box-shadow: 0 0 0px 1000px #fff inset
         option
             font-family: 'Poppins', sans-serif
             font-size: 12px
