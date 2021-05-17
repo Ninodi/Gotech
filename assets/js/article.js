@@ -5,22 +5,22 @@ let postBtn = document.querySelector('.button')
 let commentSec = document.querySelector('.comment_sec')
 let changeTitle = document.querySelector('.comment_sec_title')
 
-let userInfo = JSON.parse(localStorage.getItem('Users'))
+// let userInfo = JSON.parse(localStorage.getItem('Users'))
 
-let user = () => {
-    userInfo.push({
-        username: username.value,
-        email: email.value
+// let user = () => {
+//     userInfo.push({
+//         username: username.value,
+//         email: email.value
         
-    })
+//     })
     
-    localStorage.setItem('Users', JSON.stringify(userInfo))
+//     localStorage.setItem('Users', JSON.stringify(userInfo))
     
-    return {
-        username,
-        email
-    }
-}
+//     return {
+//         username,
+//         email
+//     }
+// }
 
 
 postBtn.addEventListener('click', () => {
@@ -64,7 +64,7 @@ postBtn.addEventListener('click', () => {
     })
     
     
-    user()
+    // user()
     
     username.value = ''
     text.value = ''
