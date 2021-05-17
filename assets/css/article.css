@@ -456,7 +456,7 @@ main {
 
 .reply p::after {
   position: absolute;
-  content: url(css/img/reply.svg);
+  content: url(/css/img/reply.svg);
   width: 15px;
   height: 15px;
   top: 0px;
