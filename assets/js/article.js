@@ -43,31 +43,29 @@ postBtn.addEventListener('click', () => {
         return
     } else {
         comment.innerHTML = innerText
-        commentSec.appendChild(comment)
-        // if(username.value === '') {
-            //     usernameValue.forEach((userValue) => {
-                //         userValue.innerText = 'Anonymous'
-        //     })
-        // }
+        commentSec.appendChild(comment)    
     }
-    let usernameValue = document.querySelector('.user')
-    let replyBtn = document.querySelectorAll('.reply_btn')
-
-    replyBtn.forEach((reply) => {
-        reply.addEventListener('click', () => {
-            if(changeTitle.innerText === 'Leave a comment') {
-                changeTitle.innerText = 'Reply to' + ' ' + usernameValue.innerText
-            } else {
-                changeTitle.innerText = 'Leave a comment'
-            }
-        })
-    })
     
-    
-    // user()
+    user()
     
     username.value = ''
     text.value = ''
     email.value = ''
     
+    let replyBtn = document.querySelectorAll('.reply_btn')
+    let usernameValue = document.querySelectorAll('.user')
+
+    replyBtn.forEach((reply) => {
+        reply.addEventListener('click', () => {
+            console.log('jora')
+            if(changeTitle.innerText === 'Leave a comment') {
+                usernameValue.forEach((userValue) => {
+                    changeTitle.innerText = 'Reply to' + ' ' + userValue.innerText
+                })
+            } else {
+                changeTitle.innerText = 'Leave a comment'
+            }
+        })
+    })
 })
+

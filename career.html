@@ -382,7 +382,7 @@
                   <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,  diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum Stet.</p>
               </div>
               <div class="career_video">
-                  <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
           </div>
       </section>
@@ -1224,6 +1224,8 @@
       var swiper = new Swiper(".mySwiper", {
         slidesPerView: 1,
         spaceBetween: 30,
+        observer: true,
+        observeParents: true,
         loop: true,
         pagination: {
           el: ".swiper-pagination",

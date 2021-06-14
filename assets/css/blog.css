@@ -216,76 +216,57 @@ main {
           align-items: center;
 }
 
-.portfolio_sec_title {
+.blog_sec_title {
   width: 100%;
   text-align: center;
   margin-bottom: 70px;
 }
 
-.portfolio_sec_title h1 {
+.blog_sec_title h1 {
   font-size: 36px;
   margin-bottom: 30px;
   font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-}
-
-.portfolio_sec_title h1 span {
   font-weight: 600;
 }
 
-.portfolio_sec_title h3 {
+.blog_sec_title h3 {
   font-size: 15px;
   color: #555555;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
 }
 
-.portfolio_items {
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-}
-
-.portfolio_title {
-  text-align: center;
-}
-
-.portfolio_title h2 {
-  font-size: 30px;
-  margin-bottom: 30px;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-}
-
-.portfolio_title h2 span {
-  font-weight: 600;
-}
-
-.portfolio_grid {
+.article_swiper {
   width: 60%;
-  margin: 0 auto;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 15px;
-  grid-row-gap: 30px;
 }
 
-.portfolio_grid_item {
-  max-width: 300px;
+.swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+}
+
+.article_grid_item {
+  max-width: 250px;
   height: 350px;
   background-color: #fff;
   border-radius: 8px;
   -webkit-box-shadow: 0 0 5px 2px #999999;
           box-shadow: 0 0 5px 2px #999999;
   padding: 5px;
+  margin-bottom: 10px;
   overflow: hidden;
-}
-
-.portfolio_grid_item:hover img {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
 }
 
 .item_img {
@@ -301,8 +282,6 @@ main {
      object-fit: cover;
   width: 100%;
   height: 100%;
-  -webkit-transition: 0.3s ease-in;
-  transition: 0.3s ease-in;
 }
 
 .item_descr {
@@ -339,6 +318,74 @@ main {
   color: #49BE55;
   font-size: 14px;
   font-weight: 500;
+}
+
+.swiper-pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  bottom: -10px !important;
+  position: static;
+}
+
+.swiper-pagination-bullet {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: unset;
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  background-color: unset;
+  color: #222222;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  border: 1px solid #49BE55;
+  border-radius: 4px;
+}
+
+.swiper-button-next {
+  top: calc( 100% - 15px);
+  right: 210px;
+  color: #222222;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+.swiper-button-next::after {
+  display: none;
+}
+
+.swiper-button-prev {
+  top: calc( 100% - 15px);
+  left: 200px;
+  color: #222222;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+.swiper-button-prev::after {
+  display: none;
 }
 
 .sec_two {
@@ -765,7 +812,7 @@ footer {
   nav a {
     font-size: 12px;
   }
-  .portfolio_grid {
+  .article_grid {
     width: 70%;
   }
   .footer_info {
@@ -800,7 +847,7 @@ footer {
     height: 14px;
     top: 12px;
   }
-  .portfolio_grid {
+  .article_grid {
     width: 80%;
   }
   .footer_info {
@@ -830,7 +877,7 @@ footer {
   .search_bar form input {
     display: none;
   }
-  .portfolio_grid {
+  .article_grid {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
   }
@@ -923,14 +970,14 @@ footer {
   .title h3 {
     font-size: 16px;
   }
-  .portfolio_title h2 {
+  .article_title h2 {
     font-size: 25px;
   }
-  .portfolio_grid {
+  .article_grid {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
-  .portfolio_grid_item {
+  .article_grid_item {
     margin: 0 auto;
   }
   .footer_info {
@@ -980,4 +1027,4 @@ footer {
     padding-right: 0px;
   }
 }
-/*# sourceMappingURL=portfolio.css.map */
+/*# sourceMappingURL=blog.css.map */
