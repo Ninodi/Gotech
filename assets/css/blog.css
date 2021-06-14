@@ -322,6 +322,9 @@ main {
 }
 
 .item_descr a {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   color: #49BE55;
   font-size: 14px;
   font-weight: 500;

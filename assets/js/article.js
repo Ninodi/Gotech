@@ -46,7 +46,7 @@ postBtn.addEventListener('click', () => {
         commentSec.appendChild(comment)    
     }
     
-    user()
+    // user()
     
     username.value = ''
     text.value = ''
