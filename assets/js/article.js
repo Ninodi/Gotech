@@ -39,6 +39,8 @@ postBtn.addEventListener('click', () => {
     `
     let comment = document.createElement('div')
     comment.classList.add('comment')
+    let usernameValue = document.querySelectorAll('.user')
+
     if(text.value === '') {
         return
     } else {
@@ -53,11 +55,10 @@ postBtn.addEventListener('click', () => {
     email.value = ''
     
     let replyBtn = document.querySelectorAll('.reply_btn')
-    let usernameValue = document.querySelectorAll('.user')
 
     replyBtn.forEach((reply) => {
         reply.addEventListener('click', () => {
-            console.log('jora')
+            // console.log('jora')
             if(changeTitle.innerText === 'Leave a comment') {
                 usernameValue.forEach((userValue) => {
                     changeTitle.innerText = 'Reply to' + ' ' + userValue.innerText
